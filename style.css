@@ -1,0 +1,42 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(wooden_background.jpeg);
+    /* This removes the tiling of the background image  */
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.piano{
+    /* This makes the divs inside piano div to be displayed side by side instead 
+    of top to bottom */
+    display: flex;
+}
+
+.key{
+
+}
+
+.white{
+    background-color: white;
+    height: 200px;
+    width: 50px;
+    border: 1px solid black;
+}
+
+.black{
+    background-color: black;
+    height: 125px;
+    width: 25px;
+    /* The following 3 lines make the black keys appear on top of the 
+    white ones */
+    margin-left: -12.5px;
+    margin-right: -12.5px;
+    z-index: 2;
+}
