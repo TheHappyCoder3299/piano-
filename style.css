@@ -17,11 +17,12 @@ body{
     /* This makes the divs inside piano div to be displayed side by side instead 
     of top to bottom */
     display: flex;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.9));
 }
 
 .key{
     /* using css variables  */
-    height : calc(var(--width) * 4);
+    height : calc(var(--width) * 5);
     width: var(--width);
 }
 

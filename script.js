@@ -1,7 +1,7 @@
 const keys=document.querySelectorAll('.key');
 
-
-console.log(keys);
+const WHITE_KEYS=['z','x','c','v','b','n','m',',','.','/','Shift','1'];
+const BLACK_KEYS=['s','d','g','h','j','l',';','Enter','4','5'];
 
 keys.forEach(key=>{
     key.addEventListener('click', ()=> playKey(key));
@@ -24,3 +24,17 @@ function playKey(key){
     //     key.classList.remove('active');
     // });
 }
+
+
+const whiteKeys=document.querySelectorAll('.key.white');
+const blackKeys=document.querySelectorAll('.key.black');
+
+document.addEventListener('keydown',(evt)=>{
+    const key=evt.key;
+
+    const whiteKeyIndex=WHITE_KEYS.indexOf(key);
+    const blackKeyIndex=BLACK_KEYS.indexOf(key);
+
+    if(whiteKeyIndex>-1) playKey(whiteKeys[whiteKeyIndex]);
+    if(blackKeyIndex>-1) playKey(blackKeys[blackKeyIndex]);
+});
