@@ -30,6 +30,9 @@ const whiteKeys=document.querySelectorAll('.key.white');
 const blackKeys=document.querySelectorAll('.key.black');
 
 document.addEventListener('keydown',(evt)=>{
+    //This takes care of the situation when a key is held down the sound
+    if(evt.repeat) return;
+
     const key=evt.key;
 
     const whiteKeyIndex=WHITE_KEYS.indexOf(key);
